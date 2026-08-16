@@ -17,8 +17,7 @@
                 <div class="mb-8" ref="logoRef">
                     <div class="inline-block">
                         <h1 class="text-7xl md:text-8xl font-bold">
-                            <span
-                                class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
+                            <span class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
                                 DEV
                             </span>
                         </h1>
@@ -27,15 +26,15 @@
                 </div>
 
                 <!-- Subtitle with typing effect -->
-                <p class="text-2xl md:text-3xl text-dark-200 font-light mb-4" ref="subtitleRef">
+                <!-- <p class="text-2xl md:text-3xl text-dark-200 font-light mb-4" ref="subtitleRef">
                     Full Stack Developer & Creative Technologist
-                </p>
+                </p> -->
 
                 <!-- Description -->
-                <p class="text-lg text-dark-300 mb-12 leading-relaxed" ref="descRef">
+                <!-- <p class="text-lg text-dark-300 mb-12 leading-relaxed" ref="descRef">
                     Crafting beautiful, high-performance web applications with modern technologies.
                     Specializing in Vue, Nuxt, and cloud-native solutions.
-                </p>
+                </p> -->
 
                 <!-- Floating particles -->
                 <div class="flex justify-center gap-4 mb-12" ref="particlesRef">
@@ -44,20 +43,6 @@
                     <div class="w-2 h-2 rounded-full bg-neon-pink animate-pulse" style="animation-delay: 0.4s;"></div>
                 </div>
 
-                <!-- CTA Buttons -->
-                <!-- <div class="flex flex-col sm:flex-row gap-4 justify-center" ref="buttonsRef">
-                    <button @click="startJourney"
-                        class="group px-8 py-4 rounded-lg bg-gradient-to-r from-neon-purple to-neon-blue text-white font-bold text-lg hover:shadow-neon transition-all duration-300 transform hover:scale-105">
-                        <span class="flex items-center justify-center gap-2">
-                            Enter Portfolio
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                        </span>
-                    </button>
-                </div> -->
             </div>
 
             <!-- Scroll indicator -->

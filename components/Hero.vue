@@ -39,11 +39,10 @@
                 </div>
 
                 <!-- Subtitle -->
-                <!-- Subtitle -->
-                <p class="text-lg md:text-xl text-text/70 mb-4 font-light transition-colors duration-300"
+                <!-- <p class="text-lg md:text-xl text-text/70 mb-4 font-light transition-colors duration-300"
                     ref="subtitleRef">
                     Judges a book by its cover.
-                </p>
+                </p> -->
 
                 <!-- Main heading -->
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-text transition-colors duration-300"
@@ -52,7 +51,7 @@
                     <br />
                     <span
                         class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
-                        Frontend Developer (Vue.js | Angular)
+                        Frontend Developer <br/> (Vue.js | Angular)
                     </span>
                 </h1>
 

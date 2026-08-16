@@ -33,7 +33,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" ref="degreesRef">
             <div v-for="degree in degrees" :key="degree.id"
-              class="bg-card p-8 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2 group">
+              class="glass-card bg-card p-8 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2 group">
 
               <!-- Header -->
               <div class="flex items-start justify-between mb-4">
@@ -100,7 +100,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" ref="coursesRef">
             <div v-for="course in courses" :key="course.id"
-              class="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2 group">
+              class="glass-card bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2 group">
 
               <!-- Badge -->
               <div class="flex items-start justify-between mb-4">
@@ -172,19 +172,19 @@ const coursesRef = ref<HTMLElement>()
 
 const degrees = [
   {
-  id: 1,
-  icon: '🎓',
-  title: 'Bachelor of Communications and Electronics Engineering',
-  institution: 'Mansoura University',
-  year: '2012 – 2017', 
-  gpa: 'Very Good',
-  description: 'Studied communications and electronics engineering with a strong foundation in programming, software development, algorithms, databases, and computer systems.',
-  // specializations: [
-  //   'Software Engineering',
-  //   'Web Development',
-  //   'Database Systems'
-  // ]
-},
+    id: 1,
+    icon: '🎓',
+    title: 'Bachelor of Communications and Electronics Engineering',
+    institution: 'Mansoura University',
+    year: '2012 – 2017',
+    gpa: 'Very Good',
+    description: 'Studied communications and electronics engineering with a strong foundation in programming, software development, algorithms, databases, and computer systems.',
+    // specializations: [
+    //   'Software Engineering',
+    //   'Web Development',
+    //   'Database Systems'
+    // ]
+  },
 ]
 
 const courses = [
@@ -196,7 +196,7 @@ const courses = [
     status: 'Completed',
     description: 'Comprehensive Angular training covering standalone components, routing, RxJS, services, state management, REST APIs, authentication, and building real-world applications.',
     duration: '02/2025 – 10/2025',
-    skills: ['Angular', 'RxJS', 'TypeScript','HTML5','CSS3','Javascript','Bootstrp','Tailwind','REST APIs'],
+    skills: ['Angular', 'RxJS', 'TypeScript', 'HTML5', 'CSS3', 'Javascript', 'Bootstrp', 'Tailwind', 'REST APIs'],
     link: 'https://drive.google.com/file/d/1CnrIbBy3OCXw1mp3s3-IvVC_RlOqr3KD/view?usp=sharing'
   },
   {
@@ -251,7 +251,7 @@ const courses = [
     status: 'Completed',
     description: 'Introduced to front-end and back-end web development concepts, databases, web technologies, and application deployment.',
     duration: '09/2020 – 11/2020',
-    skills: ['HTML5', 'CSS3', 'JavaScript','PHP', 'SQL', 'Web Development'],
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'SQL', 'Web Development'],
     link: 'https://drive.google.com/file/d/1YLnFbSPKkvvlgk9mW4zPN8Q-fJlF7TG0/view?usp=sharing'
   },
   {

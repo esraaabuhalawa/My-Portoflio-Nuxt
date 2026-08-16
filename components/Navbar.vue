@@ -1,7 +1,7 @@
 <template>
   <nav class="sticky top-0 z-50 backdrop-blur-md bg-card/80 border-b border-primary/20 transition-colors duration-300">
     <div class="max-w-7xl my-0 !mx-auto">
-      <div class="flex  items-center justify-between h-16">
+      <div class="flex  items-center justify-between h-16 px-4">
 
         <!-- Logo -->
         <div class="flex-shrink-0">
