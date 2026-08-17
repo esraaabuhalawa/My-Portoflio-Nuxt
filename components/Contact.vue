@@ -23,7 +23,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" ref="cardsRef">
                     <!-- Email Card -->
                     <div
-                        class="glass-card p-8 rounded-xl border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
+                        class="glass-card   p-8 rounded-xl bg-white border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
                         <div class="flex items-center justify-between mb-6">
                             <div
                                 class="w-16 h-16 rounded-lg bg-gradient-to-br from-neon-purple to-neon-pink flex items-center justify-center text-white text-3xl">
@@ -34,9 +34,9 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2 text-white">Email</h3>
                         <p class="text-dark-300 mb-4 text-sm">Get in touch via email for any inquiries</p>
-                        <a href="mailto:hello@example.com"
+                        <a href="mailto:esr.saad123@gmail.com"
                             class="inline-flex items-center gap-2 text-neon-purple hover:text-neon-pink transition-colors font-semibold">
-                            hello@example.com
+                            esr.saad123@gmail.com
                             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -58,7 +58,7 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2 text-white">Location</h3>
                         <p class="text-dark-300 mb-4 text-sm">Based in San Francisco, available for remote work</p>
-                        <p class="font-semibold text-neon-blue">San Francisco, California</p>
+                        <p class="font-semibold text-neon-blue">Mansoura , Egypt</p>
                     </div>
 
                     <!-- Availability Card -->
@@ -82,30 +82,29 @@
                 </div>
 
                 <!-- Contact Methods -->
-                <div class="glass-card p-12 rounded-xl border border-neon-purple/20 mb-16" ref="methodsRef">
-                    <h3 class="text-2xl font-bold mb-8 text-white">Quick Contact Methods</h3>
+                <div class="glass-card p-12 rounded-xl border border-neon-purple/20 dark:border-neon-purple/20 mb-16"
+                    ref="methodsRef">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-700 dark:text-white">
+                        Quick Contact Methods
+                    </h3>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                         <!-- Phone -->
                         <div class="flex items-center gap-4">
                             <div
                                 class="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center text-neon-purple text-xl flex-shrink-0">
                                 📱
                             </div>
-                            <div>
-                                <p class="text-dark-400 text-sm">Phone</p>
-                                <p class="text-white font-semibold">+1 (555) 123-4567</p>
-                            </div>
-                        </div>
 
-                        <!-- Discord -->
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-lg bg-neon-blue/20 flex items-center justify-center text-neon-blue text-xl flex-shrink-0">
-                                💬
-                            </div>
                             <div>
-                                <p class="text-dark-400 text-sm">Discord</p>
-                                <p class="text-white font-semibold">DevEngineer#1234</p>
+                                <p class="text-gray-500 dark:text-dark-400 text-sm">
+                                    Phone
+                                </p>
+                                <p
+                                    class="text-gray-700 dark:text-white  tracking-wide transition-colors duration-300 hover:text-cyan-400 font-semibold">
+                                    +20 111 99 86 471
+                                </p>
                             </div>
                         </div>
 
@@ -115,9 +114,15 @@
                                 class="w-12 h-12 rounded-lg bg-neon-cyan/20 flex items-center justify-center text-neon-cyan text-xl flex-shrink-0">
                                 💼
                             </div>
+
                             <div>
-                                <p class="text-dark-400 text-sm">LinkedIn</p>
-                                <p class="text-white font-semibold">linkedin.com/in/yourusername</p>
+                                <p class="text-gray-500 dark:text-dark-400 text-sm">
+                                    LinkedIn
+                                </p>
+                                <a target="_blank" href="https://www.linkedin.com/in/esraa-abuhalawa/"
+                                    class="text-gray-700 hover:text-cyan-500 dark:text-white font-semibold">
+                                    https://www.linkedin.com/in/esraa-abuhalawa/
+                                </a>
                             </div>
                         </div>
 
@@ -127,17 +132,23 @@
                                 class="w-12 h-12 rounded-lg bg-neon-pink/20 flex items-center justify-center text-neon-pink text-xl flex-shrink-0">
                                 ⏱️
                             </div>
+
                             <div>
-                                <p class="text-dark-400 text-sm">Response Time</p>
-                                <p class="text-white font-semibold">Within 24 hours</p>
+                                <p class="text-gray-500 dark:text-dark-400 text-sm">
+                                    Response Time
+                                </p>
+                                <p class="text-gray-700 dark:text-white font-semibold">
+                                    Within 24 hours
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
                 <!-- Social links -->
                 <div class="flex justify-center items-center gap-6 mb-16" ref="socialRef">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://github.com/esraaabuhalawa" target="_blank" rel="noopener noreferrer"
                         class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-neon flex items-center justify-center text-neon-purple hover:text-white hover:bg-gradient-to-r hover:from-neon-purple hover:to-neon-blue transition-all duration-300 transform hover:scale-110 border border-neon-purple/20">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -145,7 +156,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/esraa-abuhalawa/" target="_blank" rel="noopener noreferrer"
                         class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-neon flex items-center justify-center text-neon-blue hover:text-white hover:bg-gradient-to-r hover:from-neon-blue hover:to-neon-cyan transition-all duration-300 transform hover:scale-110 border border-neon-blue/20">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -153,30 +164,35 @@
                         </svg>
                     </a>
 
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-                        class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-neon flex items-center justify-center text-neon-cyan hover:text-white hover:bg-gradient-to-r hover:from-neon-cyan hover:to-neon-blue transition-all duration-300 transform hover:scale-110 border border-neon-cyan/20">
+                    <a href="https://wa.me/01119986471" target="_blank" rel="noopener noreferrer"
+                        class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] flex items-center justify-center text-[#25D366] hover:text-white hover:bg-[#25D366] transition-all duration-300 transform hover:scale-110 border border-[#25D366]/20">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a14.028 14.028 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.106 1.523 5.833L0 24l6.348-1.65A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.921 0-3.72-.55-5.24-1.5l-.375-.223-3.897 1.014 1.04-3.797-.244-.39A9.735 9.735 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
                         </svg>
                     </a>
 
-                    <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-                        class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-neon flex items-center justify-center text-neon-pink hover:text-white hover:bg-gradient-to-r hover:from-neon-pink hover:to-neon-purple transition-all duration-300 transform hover:scale-110 border border-neon-pink/20">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.658 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    <a href="mailto:esr.saad123@gmail.com" target="_blank" rel="noopener noreferrer"
+                        class="group w-14 h-14 rounded-lg bg-glass-card hover:shadow-[0_0_20px_rgba(234,67,53,0.5)] flex items-center justify-center text-[#EA4335] hover:text-white hover:bg-[#EA4335] transition-all duration-300 transform hover:scale-110 border border-[#EA4335]/20">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.904.732-1.636 1.636-1.636h.909L12 12.545l9.455-8.724h.909c.904 0 1.636.732 1.636 1.636z" />
                         </svg>
                     </a>
+
+
                 </div>
 
                 <!-- CTA Section -->
-                <div class="glass-card p-12 rounded-xl border border-neon-purple/20 max-w-3xl mx-auto text-center"
+                <div class="glass-card p-12 rounded-xl bg-white/60 dark:bg-[#1e1430]/40 border border-neon-purple/20
+    hover:border-neon-purple/50 dark:hover:shadow-neon-lg backdrop-blur-[10px] hover:-translate-y-2 max-w-3xl mx-auto text-center"
                     ref="ctaRef">
                     <h3 class="text-4xl font-bold mb-4 text-white">Ready to start a project?</h3>
                     <p class="text-lg text-dark-300 mb-8">Drop me a line and let's discuss your next amazing idea!</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="mailto:hello@example.com"
+                        <a href="mailto:esr.saad123@gmail.com"
                             class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-neon-purple to-neon-blue text-white font-bold hover:shadow-neon transition-all duration-300 transform hover:scale-105">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -292,10 +308,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.glass-card {
-    background: rgba(30, 20, 48, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-}
-</style>
+<style scoped></style>

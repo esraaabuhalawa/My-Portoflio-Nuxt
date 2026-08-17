@@ -48,14 +48,14 @@
                         </div>
 
                         <!-- Description -->
-                        <p class="text-dark-300 leading-relaxed mb-6">{{ experience.description }}</p>
+                        <p class="text-text/70 leading-relaxed mb-6">{{ experience.description }}</p>
 
                         <!-- Achievements -->
                         <div v-if="experience.achievements" class="mb-6">
                             <h4 class="text-sm font-semibold text-neon-blue mb-3">Key Achievements:</h4>
                             <ul class="space-y-2">
                                 <li v-for="(achievement, idx) in experience.achievements" :key="idx"
-                                    class="flex items-start gap-2 text-dark-300 text-sm">
+                                    class="flex items-start gap-2 text-dark-400 text-sm">
                                     <span class="text-neon-purple flex-shrink-0 mt-1">✓</span>
                                     <span>{{ achievement }}</span>
                                 </li>

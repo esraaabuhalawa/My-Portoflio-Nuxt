@@ -55,6 +55,7 @@ html {
   overflow-x: hidden;
   width: 100%;
 }
+
 /* Dark Mode (default) */
 body {
   font-family:
@@ -92,6 +93,13 @@ body::before {
   z-index: -1;
 }
 
+.glass-card {
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
 
 /* Typography */
 h1,

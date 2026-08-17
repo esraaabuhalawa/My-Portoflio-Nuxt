@@ -6,9 +6,11 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="#home" class="text-2xl font-bold">
-            <span class="bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
+            <!-- <span class="bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
               Dev
-            </span>
+            </span> -->
+            <img :src="theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'" :alt="`${theme} logo`"
+              class="block h-10 w-auto" />
           </a>
         </div>
 
@@ -99,6 +101,7 @@ import { useTheme } from '~/composables/useTheme'
 
 const mobileMenuOpen = ref(false)
 const { theme, toggleTheme } = useTheme()
+
 </script>
 
 <style scoped>
