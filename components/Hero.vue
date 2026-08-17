@@ -39,11 +39,10 @@
                 </div>
 
                 <!-- Subtitle -->
-                <!-- Subtitle -->
-                <p class="text-lg md:text-xl text-text/70 mb-4 font-light transition-colors duration-300"
+                <!-- <p class="text-lg md:text-xl text-text/70 mb-4 font-light transition-colors duration-300"
                     ref="subtitleRef">
                     Judges a book by its cover.
-                </p>
+                </p> -->
 
                 <!-- Main heading -->
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-text transition-colors duration-300"
@@ -52,7 +51,7 @@
                     <br />
                     <span
                         class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
-                        Frontend Developer (Vue.js | Angular)
+                        Frontend Developer <br /> (Vue.js | Angular)
                     </span>
                 </h1>
 
@@ -60,9 +59,9 @@
                 <p class="text-lg md:text-xl max-w-2xl mx-auto text-text/70 mb-8 leading-relaxed transition-colors duration-300"
                     ref="descRef">
                     Frontend Developer with 1.5+ years of experience building scalable and responsive web applications
-using Vue.js, Angular, and TypeScript. Skilled in API integration, state management (Vuex,
-Pinia), and performance optimization. Passionate about delivering high-quality UI/UX and
-continuously learning modern front-end technologies.
+                    using Vue.js, Angular, and TypeScript. Skilled in API integration, state management (Vuex,
+                    Pinia), and performance optimization. Passionate about delivering high-quality UI/UX and
+                    continuously learning modern front-end technologies.
                 </p>
 
                 <!-- CTA Buttons -->
@@ -103,48 +102,27 @@ const scrollRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
     if (!process.client) return;
-    // Stagger animations on load
-    if (process.client) {
-        const tl = gsap.timeline()
+    // Stagger animations on load — only animate elements that exist to avoid GSAP "target null" warnings
+    const tl = gsap.timeline()
 
-        // Fade in subtitle
-        tl.fromTo(
-            subtitleRef.value,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8 }
-        )
+    if (subtitleRef.value) {
+        tl.fromTo(subtitleRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 })
+    }
 
-        // Fade in heading
-        tl.fromTo(
-            headingRef.value,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8 },
-            '-=0.6'
-        )
+    if (headingRef.value) {
+        tl.fromTo(headingRef.value, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
+    }
 
-        // Fade in description
-        tl.fromTo(
-            descRef.value,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8 },
-            '-=0.6'
-        )
+    if (descRef.value) {
+        tl.fromTo(descRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
+    }
 
-        // Fade in buttons
-        tl.fromTo(
-            buttonsRef.value,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8 },
-            '-=0.6'
-        )
+    if (buttonsRef.value) {
+        tl.fromTo(buttonsRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
+    }
 
-        // Fade in scroll indicator
-        tl.fromTo(
-            scrollRef.value,
-            { opacity: 0 },
-            { opacity: 1, duration: 0.8 },
-            '-=0.4'
-        )
+    if (scrollRef.value) {
+        tl.fromTo(scrollRef.value, { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.4')
     }
 })
 </script>

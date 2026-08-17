@@ -1,34 +1,47 @@
 <template>
-   <!-- Start page splash screen -->
+  <NuxtPage />
+
+  <Transition name="fade">
     <div v-if="isLoading" class="start-page">
       <Start />
     </div>
-    <div v-else>
-       <RouterView />
-    </div>
+  </Transition>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import Start from '~/components/Start.vue'
-
 import { useTheme } from '~/composables/useTheme'
 
 const { initTheme } = useTheme()
 
 const isLoading = ref(true)
+
 onMounted(() => {
-    initTheme()
-  // Simulate loading time for the start page
+  initTheme()
   setTimeout(() => {
     isLoading.value = false
-  }, 3000) // Adjust this duration as needed
+  }, 3000)
 })
 </script>
 
 <style scoped>
 .start-page {
-  opacity: 1;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg, #000); /* match your theme */
+}
+
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.8s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

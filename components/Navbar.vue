@@ -1,14 +1,16 @@
 <template>
   <nav class="sticky top-0 z-50 backdrop-blur-md bg-card/80 border-b border-primary/20 transition-colors duration-300">
     <div class="max-w-7xl my-0 !mx-auto">
-      <div class="flex  items-center justify-between h-16">
+      <div class="flex  items-center justify-between h-16 px-4">
 
         <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="#home" class="text-2xl font-bold">
-            <span class="bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
+            <!-- <span class="bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
               Dev
-            </span>
+            </span> -->
+            <img :src="theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'" :alt="`${theme} logo`"
+              class="block h-10 w-auto" />
           </a>
         </div>
 
@@ -99,6 +101,7 @@ import { useTheme } from '~/composables/useTheme'
 
 const mobileMenuOpen = ref(false)
 const { theme, toggleTheme } = useTheme()
+
 </script>
 
 <style scoped>

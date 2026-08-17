@@ -51,6 +51,10 @@ html {
   --color-card: var(--card);
   --color-primary: var(--primary);
 }
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 /* Dark Mode (default) */
 body {
@@ -89,6 +93,13 @@ body::before {
   z-index: -1;
 }
 
+.glass-card {
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
 
 /* Typography */
 h1,
@@ -181,6 +192,15 @@ h3 {
 
   .section {
     padding: 40px 12px;
+  }
+}
+
+/* Allow horizontal scrolling on small screens where GSAP transforms may briefly
+   cause horizontal overflow (prevents scroll-x from being locked). */
+@media (max-width: 640px) {
+  body {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
