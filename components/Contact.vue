@@ -23,7 +23,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" ref="cardsRef">
                     <!-- Email Card -->
                     <div
-                        class="glass-card   p-8 rounded-xl bg-white border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
+                        class="glass-card p-8 rounded-xl border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
                         <div class="flex items-center justify-between mb-6">
                             <div
                                 class="w-16 h-16 rounded-lg bg-gradient-to-br from-neon-purple to-neon-pink flex items-center justify-center text-white text-3xl">

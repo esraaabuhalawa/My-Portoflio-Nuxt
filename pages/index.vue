@@ -25,4 +25,17 @@ import Skills from '~/components/Skills.vue'
 import Qualifications from '~/components/Qualifications.vue'
 import Projects from '~/components/Projects.vue'
 import Contact from '~/components/Contact.vue'
+
+useSchemaOrg([
+  definePerson({
+    name: 'Esraa Abuhalawa',
+    jobTitle: 'Frontend Developer',
+    url: 'https://esraa-abuhalawa.dev',
+    sameAs: [
+      'https://github.com/your-username',
+      'https://linkedin.com/in/your-username',
+    ],
+    knowsAbout: ['Vue.js', 'Angular', 'TypeScript', 'JavaScript', 'Frontend Development', 'Web Accessibility'],
+  })
+])
 </script>

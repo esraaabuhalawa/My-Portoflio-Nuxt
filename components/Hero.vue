@@ -19,14 +19,10 @@
                                 class="absolute inset-0 rounded-full bg-gradient-to-r from-neon-purple to-neon-blue p-1">
                                 <div
                                     class="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden transition-colors duration-300">
-                                    <!-- Placeholder avatar - replace with actual image -->
+                                    <!-- actual image -->
                                     <div
                                         class="w-full h-full bg-gradient-to-br from-neon-purple/20 to-neon-blue/20 flex items-center justify-center">
-                                        <svg class="w-24 h-24 md:w-32 md:h-32 text-neon-purple/50" fill="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                                        </svg>
+                                        <img :src="profileImage" alt="Esraa Abuhalawa" class="w-full h-full object-cover" />
                                     </div>
                                 </div>
                             </div>
@@ -92,8 +88,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
-
-const avatarRef = ref<HTMLElement | null>(null)
+const profileImage = "/images/profile.jpeg"
 const subtitleRef = ref<HTMLElement | null>(null)
 const headingRef = ref<HTMLElement | null>(null)
 const descRef = ref<HTMLElement | null>(null)
