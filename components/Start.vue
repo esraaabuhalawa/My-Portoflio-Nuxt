@@ -7,8 +7,7 @@
             <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl animate-pulse
                         bg-neon-blue/10 dark:bg-neon-blue/20"></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-3xl animate-pulse
-                        bg-neon-pink/5 dark:bg-neon-pink/10"
-                style="animation-delay: 2s;"></div>
+                        bg-neon-pink/5 dark:bg-neon-pink/10" style="animation-delay: 2s;"></div>
 
             <!-- subtle texture so light mode doesn't look flat -->
             <div class="absolute inset-0
@@ -24,8 +23,9 @@
                 <div class="mb-8" ref="logoRef">
                     <div class="inline-block">
                         <h1 class="text-7xl md:text-8xl font-bold flex justify-center">
-                             <img :src="theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'" :alt="`${theme} logo`"
-              class="block h-10 w-auto" />
+                            <img :src="logoLight" alt="Logo" class="block h-10 w-auto dark:hidden" />
+                            <img :src="logoDark" alt="" aria-hidden="true"
+                                class="hidden h-10 w-auto dark:block" />
                         </h1>
                         <div class="h-1 w-full bg-gradient-to-r from-neon-purple to-neon-blue mt-4 rounded-full"></div>
                     </div>
@@ -46,8 +46,8 @@
 
             <!-- Scroll indicator -->
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" ref="scrollRef">
-                <svg class="w-6 h-6 text-neon-purple/70 dark:text-neon-purple transition-colors"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 text-neon-purple/70 dark:text-neon-purple transition-colors" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -59,9 +59,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
-import { useTheme } from '~/composables/useTheme'
+const logoDark = '/images/logo-dark.png'
+const logoLight = '/images/logo-light.png'
 
-// const contentRef = ref<HTMLElement | null>(null)
 const logoRef = ref<HTMLElement | null>(null)
 const subtitleRef = ref<HTMLElement | null>(null)
 const descRef = ref<HTMLElement | null>(null)
@@ -69,35 +69,34 @@ const particlesRef = ref<HTMLElement | null>(null)
 const buttonsRef = ref<HTMLElement | null>(null)
 const scrollRef = ref<HTMLElement | null>(null)
 
-const { theme } = useTheme()
 
 onMounted(() => {
-  if (!process.client) return
+    if (!process.client) return
 
-  const tl = gsap.timeline()
+    const tl = gsap.timeline()
 
-  if (logoRef.value)
-    tl.fromTo(logoRef.value, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.8 })
+    if (logoRef.value)
+        tl.fromTo(logoRef.value, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.8 })
 
-  if (subtitleRef.value)
-    tl.fromTo(subtitleRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
+    if (subtitleRef.value)
+        tl.fromTo(subtitleRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
 
-  if (descRef.value)
-    tl.fromTo(descRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
+    if (descRef.value)
+        tl.fromTo(descRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.6')
 
-  if (particlesRef.value)
-    tl.fromTo(
-      particlesRef.value.querySelectorAll('div'),
-      { opacity: 0, scale: 0 },
-      { opacity: 1, scale: 1, duration: 0.6, stagger: 0.1 },
-      '-=0.6'
-    )
+    if (particlesRef.value)
+        tl.fromTo(
+            particlesRef.value.querySelectorAll('div'),
+            { opacity: 0, scale: 0 },
+            { opacity: 1, scale: 1, duration: 0.6, stagger: 0.1 },
+            '-=0.6'
+        )
 
-  if (buttonsRef.value)
-    tl.fromTo(buttonsRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
+    if (buttonsRef.value)
+        tl.fromTo(buttonsRef.value, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
 
-  if (scrollRef.value)
-    tl.fromTo(scrollRef.value, { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.4')
+    if (scrollRef.value)
+        tl.fromTo(scrollRef.value, { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.4')
 })
 </script>
 
