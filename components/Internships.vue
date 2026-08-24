@@ -8,8 +8,7 @@
 
         <div class="relative z-10">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
-                <!-- <p class="text-lg text-dark-300 mb-4">Building scalable solutions and leading teams</p> -->
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Internships</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-neon-purple to-neon-blue mx-auto"></div>
             </div>
 
@@ -90,37 +89,38 @@ const cardsRef = ref<HTMLElement>()
 
 const experiences = [
     {
-        id: 1,
-        icon: '⚡',
-        title: 'Frontend developer',
-        company: 'Misk Its, Qussier -Red Sea',
-        description: 'Developed responsive UI components and fixed critical bugs. Improved page load time and user experience.',
-        duration: '05/2024 – 10/2025',
-        badge: 'Frontend',
+        id: 2,
+        icon: '🎯',
+        title: 'Frontend Developer Intern',
+        company: 'Upskilling',
+        description: 'Participating in an intensive frontend training program to strengthen Angular skills, explore modern development practices, and build production-ready portfolio projects.',
+        duration: '04/2026 – 08/2026',
+        badge: 'Intern',
         achievements: [
-            'Developed 5+ production web applications using Vue.js and Angular',
-            'Built 20+ reusable UI components, improving development speed',
-            'Improved application performance by ~25% through optimization',
-            'Integrated 50+ REST API endpoints for dynamic data handling',
-            'Identified and resolved 50+ UI bugs',
-            'Collaborated with designers to deliver pixel-perfect UI'
+            'Built multiple responsive portfolio projects using Angular and TypeScript',
+            'Strengthened knowledge of modern Angular architecture and best practices',
+            'Implemented reusable and scalable UI components with PrimeNG',
+            'Integrated REST APIs and managed application state effectively',
+            'Applied Git workflows and collaborative development practices',
+            'Focused on writing clean, maintainable, and reusable code'
         ],
-        techs: ['Vue', 'Vuex', 'Pinia', 'Prime vue', 'Element Plus', 'Angular', 'Prime Ng', 'RJX', 'TypeScript', 'JavaScript', 'CSS', 'Tailwind CSS', 'Bootstrap', 'REST APIs', 'Git', 'Figma']
-    },
-    {
-        id: 3,
-        icon: '💼',
-        title: 'IT Help Desk and E-commerce Coordinator',
-        company: 'Fahad Abdullah A. Rahman Saeed Trading Est.',
-        description: 'Managed e-commerce platforms and updated website content.',
-        duration: '04/2019 – 08/2020',
-        achievements: [
-            'Managed e-commerce platforms and updated website content',
-            'Worked with Magento, OpenCart, and WordPress',
-            'Maintained system stability and provided technical support',
-            'Assisted in implementing new features for e-commerce platforms'
-        ],
-        techs: ['OpenCart', ' Magento', 'WordPress']
+        techs: [
+            'Angular 16',
+            'Angular 21',
+            'Angular Material',
+            'Bootstrap',
+            'ngx-bootstrap',
+            'PrimeNG',
+            'Tailwind',
+            'Prime Flex',
+            'RxJS',
+            'TypeScript',
+            'JavaScript',
+            'HTML',
+            'CSS',
+            'Git',
+            'REST APIs'
+        ]
     },
 ]
 

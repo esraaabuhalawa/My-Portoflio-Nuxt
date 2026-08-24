@@ -115,7 +115,7 @@
                             </div>
 
                             <!-- Play video button -->
-                            <button v-if="project.video" @click="openVideo(project)"
+                            <!-- <button v-if="project.video" @click="openVideo(project)"
                                 :aria-label="`Watch ${project.title} demo video`"
                                 class="absolute inset-0 flex items-center justify-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
                                 <span
@@ -124,7 +124,7 @@
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </span>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>

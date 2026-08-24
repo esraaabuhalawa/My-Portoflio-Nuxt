@@ -41,15 +41,29 @@
                 </p> -->
 
                 <!-- Main heading -->
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-text transition-colors duration-300"
+                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-text transition-colors duration-300"
+    ref="headingRef">
+    I'm 
+    <br />
+    <span
+        class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
+         Esraa Abuhalawa
+       
+    </span>
+</h1>
+
+<p class="text-xl md:text-2xl font-medium text-text/80 tracking-wide mb-4">
+    Frontend Developer (Vue.js | Angular)
+</p>
+                <!-- <h1 class="text-5xl md:text-7xl font-bold mb-6 text-text transition-colors duration-300"
                     ref="headingRef">
-                    I'm a
+                    I'm 
                     <br />
                     <span
                         class="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue bg-clip-text text-transparent">
                         Frontend Developer <br /> (Vue.js | Angular)
                     </span>
-                </h1>
+                </h1> -->
 
                 <!-- Description -->
                 <p class="text-lg md:text-xl max-w-2xl mx-auto text-text/70 mb-8 leading-relaxed transition-colors duration-300"
@@ -62,10 +76,14 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center" ref="buttonsRef">
-                    <a href="#projects"
-                        class="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-purple to-neon-blue text-white font-semibold hover:shadow-neon transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                        View My Work
-                    </a>
+                                       <a href="/Esraa_Abuhalawa_Mahmmoud_frontend_developer.pdf"  download="Esraa_Abuhalawa_Mahmmoud_frontend_developer.pdf"
+    class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-neon-purple text-white hover:bg-neon-purple/90 font-bold transition-all duration-300">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+    </svg>
+    Download my CV
+</a>
 
                     <a href="#contact"
                         class="px-8 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary/10 font-semibold transition-all duration-300 cursor-pointer">
