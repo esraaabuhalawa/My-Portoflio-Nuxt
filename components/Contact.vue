@@ -23,7 +23,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" ref="cardsRef">
                     <!-- Email Card -->
                     <div
-                        class="glass-card p-8 rounded-xl border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
+                        class="glass-card p-6 lg:p-8 rounded-xl border border-neon-purple/20 hover:border-neon-purple/50 group transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-lg">
                         <div class="flex items-center justify-between mb-6">
                             <div
                                 class="w-16 h-16 rounded-lg bg-gradient-to-br from-neon-purple to-neon-pink flex items-center justify-center text-white text-3xl">
@@ -57,7 +57,7 @@
                                 class="px-3 py-1 rounded-full bg-neon-blue/20 text-neon-blue text-xs font-semibold">Location</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2 text-white">Location</h3>
-                        <p class="text-dark-300 mb-4 text-sm">Based in San Francisco, available for remote work</p>
+                        <p class="text-dark-300 mb-4 text-sm">Based in Mansoura, available for remote work</p>
                         <p class="font-semibold text-neon-blue">Mansoura , Egypt</p>
                     </div>
 
@@ -82,9 +82,9 @@
                 </div>
 
                 <!-- Contact Methods -->
-                <div class="glass-card p-12 rounded-xl border border-neon-purple/20 dark:border-neon-purple/20 mb-16"
+                <div class="glass-card p-6 md:p-12 rounded-xl border border-neon-purple/20 dark:border-neon-purple/20 mb-16"
                     ref="methodsRef">
-                    <h3 class="text-2xl font-bold mb-8 text-gray-700 dark:text-white">
+                    <h3 class="text-xl lg:text-2xl font-bold mb-8 text-gray-700 dark:text-white">
                         Quick Contact Methods
                     </h3>
 
@@ -120,7 +120,7 @@
                                     LinkedIn
                                 </p>
                                 <a target="_blank" href="https://www.linkedin.com/in/esraa-abuhalawa/"
-                                    class="text-gray-700 hover:text-cyan-500 dark:text-white font-semibold">
+                                     class="text-gray-700 hover:text-cyan-500 dark:text-white font-semibold [overflow-wrap:anywhere]">
                                     https://www.linkedin.com/in/esraa-abuhalawa/
                                 </a>
                             </div>
@@ -186,7 +186,7 @@
                 </div>
 
                 <!-- CTA Section -->
-                <div class="glass-card p-12 rounded-xl bg-white/60 dark:bg-[#1e1430]/40 border border-neon-purple/20
+                <div class="glass-card p-5 md:p-12 rounded-xl bg-white/60 dark:bg-[#1e1430]/40 border border-neon-purple/20
     hover:border-neon-purple/50 dark:hover:shadow-neon-lg backdrop-blur-[10px] hover:-translate-y-2 max-w-3xl mx-auto text-center"
                     ref="ctaRef">
                     <h3 class="text-4xl font-bold mb-4 text-white">Ready to start a project?</h3>
@@ -200,14 +200,14 @@
                             </svg>
                             Send me an email
                         </a>
-                        <a href="#experience"
-                            class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-neon-purple text-neon-purple hover:bg-neon-purple/10 font-bold transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                            View my experience
-                        </a>
+                        <a href="/Esraa_Abuhalawa_Mahmmoud_frontend_developer.pdf"  download="Esraa_Abuhalawa_Mahmmoud_frontend_developer.pdf"
+    class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-neon-purple text-white hover:bg-neon-purple/90 font-bold transition-all duration-300">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+    </svg>
+    Download my CV
+</a>
                     </div>
                 </div>
             </div>

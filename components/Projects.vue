@@ -1,30 +1,45 @@
 <template>
     <section id="projects" class="section py-20 relative">
         <!-- Background effects -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/3 right-0 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl"></div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/3 right-0 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 1.5s;"></div>
+            <div class="absolute inset-0 projects-grid"></div>
         </div>
 
         <div class="relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-4xl  md:text-5xl font-bold mb-4">Featured Projects</h2>
-                <p class="text-lg text-text/70 mb-4">Showcasing my best work and technical expertise</p>
-                <div class="w-20 h-1 bg-gradient-to-r from-neon-purple to-neon-blue mx-auto"></div>
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-1.5 mb-5 rounded-full border border-neon-purple/25 bg-neon-purple/10 backdrop-blur-sm text-xs font-semibold uppercase tracking-[0.18em] text-neon-purple">
+                    Portfolio
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-lg text-text/70 mb-5 max-w-2xl mx-auto">Showcasing my best work and technical expertise
+                </p>
+                <div class="w-20 h-1 rounded-full bg-gradient-to-r from-neon-purple to-neon-blue mx-auto"></div>
             </div>
             <!--Project Card--->
-            <div class="max-w-5xl mx-auto space-y-20">
-                <div v-for="(project, index) in projects" :key="project.id" :ref="el => setProjectRef(el, index)" class="glass-card overflow-hidden rounded-2xl group
-            bg-white/40 dark:bg-[#1e1430]/40
-            border border-neon-purple/20 hover:border-neon-purple/40
-            shadow-sm hover:shadow-xl hover:shadow-neon-purple/10
+            <div class="max-w-6xl mx-auto space-y-12 lg:space-y-16">
+                <div v-for="(project, index) in projects" :key="project.id" :ref="el => setProjectRef(el, index)" class="glass-card relative overflow-hidden rounded-3xl group
+            bg-white/50 dark:bg-[#1e1430]/40
+            border border-neon-purple/15 hover:border-neon-purple/40
+            backdrop-blur-xl
+            shadow-sm hover:shadow-2xl hover:shadow-neon-purple/10
+            hover:-translate-y-1
             transition-all duration-500">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+
+                    <!-- Hover sheen -->
+                    <div
+                        class="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-neon-purple/[0.06] via-transparent to-neon-blue/[0.06]">
+                    </div>
+
+                    <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-0">
 
                         <!-- Content side -->
                         <div :class="[
-                            'p-8 md:p-12 lg:p-14 flex flex-col justify-center',
-                            index % 2 === 0 ? 'lg:order-first' : 'lg:order-last'
+                            'p-7 sm:p-9 lg:p-12 flex flex-col justify-center',
+                            index % 2 === 0 ? 'order-last lg:order-first' : 'order-last lg:order-last'
                         ]">
                             <!-- Index + Tag -->
                             <!-- <div class="flex items-center gap-3 mb-5" data-animate>
@@ -39,25 +54,30 @@
                             </div> -->
 
                             <!-- Project title -->
-                            <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white tracking-tight leading-tight"
+                            <h3 class="text-[22px] sm:text-xl lg:text-[2rem] font-bold mb-4 text-gray-900 dark:text-white tracking-tight leading-tight"
                                 data-animate>
                                 {{ project.title }}
                             </h3>
                             <!-- Project description -->
-                            <p class="text-text/70 mb-6 leading-relaxed text-sm" data-animate>{{ project.description }}
+                            <p class="text-text/70 mb-7 leading-relaxed text-sm sm:text-[0.95rem]" data-animate>{{
+                                project.description }}
                             </p>
 
                             <!-- Tools used -->
                             <div class="mb-8" data-animate>
-                                <h4 class="text-xs font-semibold text-neon-blue mb-3 tracking-wide uppercase">Tools Used
+                                <h4
+                                    class="flex items-center gap-3 text-[0.7rem] font-semibold text-neon-blue mb-3 tracking-[0.16em] uppercase">
+                                    Tools Used
+                                    <span class="h-px flex-1 bg-gradient-to-r from-neon-blue/30 to-transparent"></span>
                                 </h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span v-for="tech in project.techs" :key="tech" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full
+                                    <span v-for="tech in project.techs" :key="tech" class="inline-flex items-center gap-0.5 lg:gap-1.5 px-3 py-1.5 rounded-lg
                                 bg-neon-purple/5 dark:bg-neon-purple/10
                                 border border-neon-purple/20
                                 text-gray-700 dark:text-neon-purple text-xs font-medium
                                 hover:border-neon-purple/50 hover:bg-neon-purple/10 dark:hover:bg-neon-purple/20
-                                transition-colors duration-200">
+                                hover:-translate-y-0.5 text-sm
+                                transition-all duration-200">
                                         <i v-if="techIcons[tech]" :class="techIcons[tech]" class="colored text-sm"></i>
                                         {{ tech }}
                                     </span>
@@ -67,9 +87,10 @@
                             <!-- Links -->
                             <div class="flex gap-3 flex-wrap" data-animate>
                                 <a :href="project.github" target="_blank" rel="noopener noreferrer"
-                                    :aria-label="`View ${project.title} source code on GitHub`" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
-                            border border-neon-purple/40 text-gray-700 dark:text-neon-purple
+                                    :aria-label="`View ${project.title} source code on GitHub`" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
+                            border border-neon-purple/30 text-gray-700 dark:text-neon-purple
                             hover:border-neon-purple hover:bg-neon-purple/5 dark:hover:bg-neon-purple/10
+                            hover:-translate-y-0.5
                             font-semibold text-sm transition-all duration-300">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -78,44 +99,48 @@
                                     Code
                                 </a>
                                 <a :href="project.live" target="_blank" rel="noopener noreferrer"
-                                    :aria-label="`View ${project.title} live demo`" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+                                    :aria-label="`View ${project.title} live demo`" class="group/cta inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
                             bg-gradient-to-r from-neon-purple to-neon-blue text-white
                             font-semibold text-sm
-                            hover:shadow-lg hover:shadow-neon-purple/30
+                            shadow-lg shadow-neon-purple/20 hover:shadow-neon-purple/40
                             transition-all duration-300 transform hover:-translate-y-0.5">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    Demo
+                                    <svg class="w-4 h-4 transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
-                                    Live Demo
                                 </a>
                             </div>
                         </div>
 
                         <!-- Image side -->
                         <div :class="[
-                            'h-72 lg:h-auto bg-gradient-to-br flex items-center justify-center overflow-hidden relative',
-                            index % 2 === 0 ? 'lg:order-last from-neon-purple/20 to-neon-blue/20' : 'lg:order-first from-neon-blue/20 to-neon-purple/20'
+                            'relative min-h-[16rem] sm:min-h-[20rem] lg:min-h-[26rem] bg-gradient-to-br flex items-center justify-center overflow-hidden',
+                            index % 2 === 0 ? 'order-first lg:order-last from-neon-purple/20 to-neon-blue/20' : 'order-first lg:order-first from-neon-blue/20 to-neon-purple/20'
                         ]">
-                        <img
-  v-if="project.image"
-  :src="project.image"
-  :alt="project.title"
-  class="w-full h-[502px] object-cover object-top
-           will-change-transform
-           group-hover:scale-110"
-/>
-                        <div v-else
+                            <img v-if="project.image" :src="project.image" :alt="project.title" loading="lazy"
+                                decoding="async" class="absolute inset-0 w-full h-full object-cover object-top
+                                     will-change-transform
+                                     group-hover:scale-[1.06]" />
+                            <div v-else
                                 class="text-8xl transition-transform duration-700 ease-out group-hover:scale-110 select-none">
                                 {{ project.emoji }}
                             </div>
 
-
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent">
-                            </div>
+                            <!-- Live badge -->
+                            <span
+                                class="absolute top-4 right-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-[0.7rem] font-semibold tracking-wide">
+                                <span class="relative flex h-1.5 w-1.5">
+                                    <span
+                                        class="absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75 animate-ping"></span>
+                                    <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-neon-cyan"></span>
+                                </span>
+                                Live
+                            </span>
 
                             <!-- Play video button -->
-                            <button v-if="project.video" @click="openVideo(project)"
+                            <!-- <button v-if="project.video" @click="openVideo(project)"
                                 :aria-label="`Watch ${project.title} demo video`"
                                 class="absolute inset-0 flex items-center justify-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
                                 <span
@@ -124,7 +149,7 @@
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </span>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>

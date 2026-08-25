@@ -4,6 +4,7 @@
     <Navbar />
     <Hero />
     <WorkExperience />
+    <Internships />
     <Skills />
     <Qualifications />
     <Projects />
@@ -30,10 +31,10 @@ useSchemaOrg([
   definePerson({
     name: 'Esraa Abuhalawa',
     jobTitle: 'Frontend Developer',
-    url: 'https://esraa-abuhalawa.dev',
+    url: 'https://esraa.online',
     sameAs: [
-      'https://github.com/your-username',
-      'https://linkedin.com/in/your-username',
+      'https://github.com/esraaabuhalawa',
+      'https://www.linkedin.com/in/esraa-abuhalawa/',
     ],
     knowsAbout: ['Vue.js', 'Angular', 'TypeScript', 'JavaScript', 'Frontend Development', 'Web Accessibility'],
   })
