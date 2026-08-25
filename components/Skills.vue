@@ -29,9 +29,9 @@
         </div>
 
         <!-- Glowing element with animation -->
-        <div class="mt-20 flex justify-center">
+        <!-- <div class="mt-20 flex justify-center">
             <EnergyCore />
-        </div>
+        </div> -->
     </section>
 </template>
 

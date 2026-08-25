@@ -9,7 +9,6 @@
         <div class="relative z-10">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
-                <!-- <p class="text-lg text-dark-300 mb-4">Building scalable solutions and leading teams</p> -->
                 <div class="w-20 h-1 bg-gradient-to-r from-neon-purple to-neon-blue mx-auto"></div>
             </div>
 
@@ -21,14 +20,14 @@
                         class="glass-card !p-4 rounded-xl group hover:shadow-neon-lg transition-all duration-300 transform hover:-translate-y-2 border border-neon-purple/20 hover:border-neon-purple/50">
 
                         <!-- Header with icon and badge -->
-                        <div class="flex items-start justify-between mb-6">
+                        <div class="flex flex-wrap items-start justify-between mb-6">
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="w-16 h-16 rounded-lg bg-gradient-to-r from-neon-purple to-neon-blue flex items-center justify-center text-white text-3xl flex-shrink-0">
+                                    class="w-12 h-12 lg:w-16 lg:h-16 rounded-lg bg-gradient-to-r from-neon-purple to-neon-blue flex items-center justify-center text-white text-3xl flex-shrink-0">
                                     {{ experience.icon }}
                                 </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold mb-1 mt-2 text-white">{{ experience.title }}</h3>
+                                    <h3 class="text-xl lg:text-2xl font-bold mb-1 mt-2 text-white">{{ experience.title }}</h3>
                                     <p class="text-neon-purple font-semibold">{{ experience.company }}</p>
                                 </div>
                             </div>
