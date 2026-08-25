@@ -37,8 +37,7 @@
 
           <!-- Theme Toggle -->
           <button @click="toggleTheme" title="Toggle dark mode" aria-label="Toggle dark mode">
-            <svg class="hidden h-5 w-5 dark:block" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
+            <svg class="hidden h-5 w-5 dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <!-- Sun -->
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -69,8 +68,55 @@
 
       </div>
 
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden pb-4 bg-card border-t border-primary/20">
+      <!-- Backdrop -->
+      <Transition name="fade">
+        <div v-if="mobileMenuOpen" class="fixed inset-0 h-screen bg-black/50 z-40 md:hidden"
+          @click="mobileMenuOpen = false"></div>
+      </Transition>
+
+      <!-- Offcanvas panel -->
+      <Transition name="slide">
+        <div v-if="mobileMenuOpen" dir="auto"
+          class="fixed top-0 ltr:left-0 rtl:right-0 h-screen w-64 bg-white dark:bg-card border-e border-primary/20 z-50 md:hidden flex flex-col">
+          <div
+            class="flex items-center justify-between px-4 py-4 bg-gray-100 dark:bg-white/5 border-b border-primary/20">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="#home" class="text-2xl font-bold">
+                <img :src="logoLight" alt="Logo" class="block h-10 w-auto dark:hidden" />
+                <img :src="logoDark" alt="" aria-hidden="true" class="hidden h-10 w-auto dark:block" />
+              </a>
+            </div>
+            <button @click="mobileMenuOpen = false" aria-label="Close menu"
+              class="p-2 text-text hover:text-neon-purple transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <nav class="flex flex-col pb-4">
+            <a href="#home" @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-text hover:text-neon-purple hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+              Home
+            </a>
+            <a href="#experience" @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-text hover:text-neon-purple hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+              Experience
+            </a>
+            <a href="#projects" @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-text hover:text-neon-purple hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+              Projects
+            </a>
+            <a href="#contact" @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-text hover:text-neon-purple hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+              Contact
+            </a>
+          </nav>
+        </div>
+      </Transition>
+      <!-- <div v-if="mobileMenuOpen" class="md:hidden pb-4 bg-card border-t border-primary/20">
         <a href="#home" class="block px-3 py-2 text-base font-medium text-text hover:text-primary transition">
           Home
         </a>
@@ -86,8 +132,7 @@
         <a href="#contact" class="block px-3 py-2 text-base font-medium text-text hover:text-primary transition">
           Contact
         </a>
-      </div>
-
+      </div> -->
     </div>
   </nav>
 </template>
@@ -108,5 +153,30 @@ const toggleTheme = () => {
 <style scoped>
 a {
   cursor: pointer;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .slide-enter-from,
+[dir="rtl"] .slide-leave-to {
+  transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
